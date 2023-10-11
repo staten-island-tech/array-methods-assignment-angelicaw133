@@ -15,8 +15,7 @@ const albums = [
     genre: ["Pop", "Country"],
     year_released: 2021,
     number_of_songs: 26,
-    first_three_songs: ["Fearless (Taylor's Version)", "Fiteen (Taylor's Version)", "Love Story(Taylor's Version",
-    ],
+    first_three_songs: ["Fearless (Taylor's Version)", "Fiteen (Taylor's Version)", "Love Story(Taylor's Version"],
     collaborators: true,
     explicit: false,
   },
@@ -42,5 +41,9 @@ const albums = [
   },
 ];
 
-albums.forEach((albums)=> console.log(albums.album_title))
-albums.forEach((albums)=> console.log(albums.first_three_songs) )
+albums.forEach((album)=> console.log(album.album_title))
+albums.forEach((album) => 
+  album.first_three_songs.forEach((song) => console.log(song))
+  )
+const not_explicit = albums.filter((album)=> album.explicit !==true)
+console.log(not_explicit);
