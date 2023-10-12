@@ -42,8 +42,8 @@ const albums = [
 ];
 
 albums.forEach((album)=> console.log(album.album_title))
-albums.forEach((album) => 
-  album.first_three_songs.forEach((song) => console.log(song))
-  )
+albums.forEach((album) =>
+  album.first_three_songs.forEach((song)=> console.log(song))
+)
 const not_explicit = albums.filter((album)=> album.explicit !==true)
 console.log(not_explicit);
